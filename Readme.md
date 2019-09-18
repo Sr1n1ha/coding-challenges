@@ -1,10 +1,10 @@
 # A set of coding challenges for engineering roles at Archistar
 
 ## Purpose
-Aim of these test are threefold,
+Aim of these tests are to,
 
 - evaluate your software engineering capability
-- judge your technical experience and maturity
+- benchmark your technical experience and maturity
 - understand how you design and implement your solution
 
 ## How you will be judged
