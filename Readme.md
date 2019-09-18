@@ -1,7 +1,7 @@
 # A set of coding challenges for engineering roles at Archistar
 
 ## Purpose
-Aim of this test is threefold,
+Aim of these test are threefold,
 
 - evaluate your software engineering capability
 - judge your technical experience and maturity
@@ -10,13 +10,16 @@ Aim of this test is threefold,
 ## How you will be judged
 You will be scored on,
 
-- coding style, comments, and logging
-- design patterns and algorithms
-- solution design - structure and quality
-- appropriate use of source control
-- considerations for CI/CD/DevExp
-- bonus points for unit/E2E tests
+- coding style, comments, and logging (20%)
+- design patterns and algorithms (20%)
+- solution design - structure and quality (20%)
+- use of source control and documentation (20%)
+- considerations for CI/CD/DevExp (10%)
+- some basic unit/functional/E2E tests (10%)
 
 ## Tests
 
 - [Sr. Software Engineer Frontend focused](Sr-Software-Engineer-FE.md)
+
+## Finally
+Once you finished the test, either send us a pull request or URL for your Github repository.
