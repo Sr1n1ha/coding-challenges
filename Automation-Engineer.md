@@ -20,4 +20,4 @@ You will be scored on,
 1. Write automated E2E test for [linked VueJS example app](https://vue-vuex-realworld.netlify.com/) using JavaScript/TypeScript.
 2. You can use the any of following frameworks: [Cypress](Cypress.io), [Testcafe](https://devexpress.github.io/testcafe/) 
 3. Versiong control all your work using a personal Github repository
-4. Share your repository and instructions to run your tests with us
+4. Send us your repository URL and instructions on how to run your tests
