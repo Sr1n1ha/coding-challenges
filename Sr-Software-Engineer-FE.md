@@ -1,4 +1,21 @@
-# Coding challenge for Sr Software Engineer (Frontend)
+# Coding challenge for Sr Software Engineer (Frontend)/Technical Lead (UI and Graphics)
+
+## Purpose
+Aim of these tests are to,
+
+- evaluate your software engineering capability
+- benchmark your technical experience and maturity
+- understand how you design and implement your solution
+
+## How you will be judged
+You will be scored on,
+
+- coding style, comments, and logging (20%)
+- design patterns and algorithms (20%)
+- solution design - structure and quality (20%)
+- use of source control and documentation (20%)
+- considerations for CI/CD/DevExp (10%)
+- some basic unit/functional/E2E tests (10%)
 
 ## Instructions
 
