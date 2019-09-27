@@ -20,6 +20,7 @@ You will be scored on,
 ## Tests
 
 - [Sr. Software Engineer Frontend focused](Sr-Software-Engineer-FE.md)
+- [Automation Engineer](Automation-Engineer.md)
 
 ## Finally
 Once you finished the test, either send us a pull request or URL for your Github repository.
