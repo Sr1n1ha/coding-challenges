@@ -21,3 +21,4 @@ You will be scored on,
 2. You can use the any of following frameworks: [Cypress](Cypress.io), [Testcafe](https://devexpress.github.io/testcafe/) 
 3. Versiong control all your work using a personal Github repository
 4. Send us your repository URL and instructions on how to run your tests
+5. Bonus points if you can write APIs tests for [endpoint]( https://conduit.productionready.io/api) used by example app.
