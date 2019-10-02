@@ -6,7 +6,7 @@ fixture `All Tests`
         username: 'srinivas.marepalli@yahoo.com',
         password: 'xxxxxxxxxxxx'
     });
-
+// Test for Create, Post & Delete comments //
 test('createpost_deletepost', async t => {
     await t
         .click(Selector('.preview-link').nth(9).find('span').withText('Read more...'))
@@ -29,6 +29,7 @@ test('createpost_deletepost', async t => {
         .click(Selector('button').withText('Or click here to logout.'));
 });
 
+// Test for Wrong Login credential scenario //
 test('wronglogintest', async t => {
     await t
         .click(Selector('a').withText('Sign in'))
@@ -38,6 +39,7 @@ test('wronglogintest', async t => {
         .click(Selector('button').withText('Sign in'));
 });
 
+// Test for Selection of Like scenario //
 test('Newtestlikearticle', async t => {
     await t
         .click(Selector('button').withText('0').find('.ion-heart'))
@@ -52,6 +54,7 @@ test('Newtestlikearticle', async t => {
         .click(Selector('button').withText('Or click here to logout.'));
 });
 
+// Test for Selection of Popular Tag //
 test('Populartagtest', async t => {
     await t
         .drag(Selector('h1').withText('conduit'), 212, 18, {
@@ -68,6 +71,7 @@ test('Populartagtest', async t => {
         .click(Selector('a').withText('Home'));
 });
 
+// Test for Navigation to Multiple pages //
 test('Multiplepageselectorstest', async t => {
     await t
         .click(Selector('[class^="navbar-brand router-link-exact-active router-link-"]'))
@@ -77,7 +81,7 @@ test('Multiplepageselectorstest', async t => {
         .click(Selector('a').withText('Home'));
 });
 
-
+// Test for Complete Automate scenarios- repeated //
 test('Automation_test_Combined_testing', async t => {
     await t
         .click(Selector('a').withText('Sign in'))
