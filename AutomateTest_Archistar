@@ -1,0 +1,131 @@
+import { Selector } from 'testcafe';
+
+fixture `All Tests`
+    .page `https://vue-vuex-realworld.netlify.com/#/`
+    .httpAuth({
+        username: 'srinivas.marepalli@yahoo.com',
+        password: 'xxxxxxxxxxxx'
+    });
+
+test('createpost_deletepost', async t => {
+    await t
+        .click(Selector('.preview-link').nth(9).find('span').withText('Read more...'))
+        .click(Selector('.col-xs-12.col-md-8.offset-md-2').find('a').withText('Sign in'))
+        .typeText(Selector('.form-group').find('.form-control.form-control-lg'), 'srinivas.marepalli@yahoo.com')
+        .pressKey('tab')
+        .typeText(Selector('.form-group').nth(1).find('.form-control.form-control-lg'), 'test.')
+        .pressKey('backspace')
+        .typeText(Selector('.form-group').nth(1).find('.form-control.form-control-lg'), 'test123')
+        .click(Selector('.col-md-6.offset-md-3.col-xs-12'))
+        .click(Selector('button').withText('Sign in'))
+        .click(Selector('a').withText('New Article'))
+        .typeText(Selector('.form-control.form-control-lg'), 'new test article')
+        .typeText(Selector('.form-group').nth(2).find('.form-control'), 'my post')
+        .click(Selector('button').withText('Publish Article'))
+        .typeText(Selector('.form-group').nth(1).find('.form-control'), 'test article')
+        .click(Selector('button').withText('Publish Article'))
+        .click(Selector('.btn.btn-outline-danger.btn-sm').nth(1).find('span').withText('Delete Article'))
+        .click(Selector('a').withText('Settings'))
+        .click(Selector('button').withText('Or click here to logout.'));
+});
+
+test('wronglogintest', async t => {
+    await t
+        .click(Selector('a').withText('Sign in'))
+        .typeText(Selector('.form-group').find('.form-control.form-control-lg'), 'stinid@gmail.com')
+        .pressKey('tab')
+        .typeText(Selector('.form-group').nth(1).find('.form-control.form-control-lg'), 'sdjss')
+        .click(Selector('button').withText('Sign in'));
+});
+
+test('Newtestlikearticle', async t => {
+    await t
+        .click(Selector('button').withText('0').find('.ion-heart'))
+        .typeText(Selector('.form-group').find('.form-control.form-control-lg'), 'srinivas.marepalli@yahoo.com')
+        .typeText(Selector('.form-group').nth(1).find('.form-control.form-control-lg'), 'testtest123')
+        .click(Selector('button').withText('Sign in'))
+        .click(Selector('.btn.btn-sm.pull-xs-right.btn-outline-primary').nth(1).find('span').withText('0'))
+        .click(Selector('.btn.btn-sm.pull-xs-right.btn-outline-primary').find('span').withText('0'))
+        .click(Selector('.btn.btn-sm.pull-xs-right.btn-primary').nth(1).find('span').withText('1'))
+        .click(Selector('button').withText('1'))
+        .click(Selector('a').withText('Settings'))
+        .click(Selector('button').withText('Or click here to logout.'));
+});
+
+test('Populartagtest', async t => {
+    await t
+        .drag(Selector('h1').withText('conduit'), 212, 18, {
+            offsetX: 242,
+            offsetY: 32
+        })
+        .click(Selector('a').withText('butt'))
+        .click(Selector('a').withText('Tester987'))
+        .click(Selector('h1').withText('This is heavy...'))
+        .drag(Selector('.article-page'), 204, -710, {
+            offsetX: 911,
+            offsetY: 4004
+        })
+        .click(Selector('a').withText('Home'));
+});
+
+test('Multiplepageselectorstest', async t => {
+    await t
+        .click(Selector('[class^="navbar-brand router-link-exact-active router-link-"]'))
+        .click(Selector('a').withText('49'))
+        .click(Selector('a').withText('35'))
+        .click(Selector('.preview-link').nth(7).find('h1').withText('test'))
+        .click(Selector('a').withText('Home'));
+});
+
+
+test('Automation_test_Combined_testing', async t => {
+    await t
+        .click(Selector('a').withText('Sign in'))
+        .typeText(Selector('.form-group').find('.form-control.form-control-lg'), 'srinivas.marepalli@yahoo.com')
+        .typeText(Selector('.form-group').nth(1).find('.form-control.form-control-lg'), 'testtest123')
+        .click(Selector('button').withText('Sign in'))
+        .click(Selector('.preview-link').find('h1').withText('Special article title'))
+        .typeText(Selector('.form-control'), 'test')
+        .click(Selector('button').withText('Post Comment'))
+        .click(Selector('.ion-trash-a'))
+        .click(Selector('.article-meta').find('button').withText('Follow adam1234io'))
+        .click(Selector('.btn.btn-sm.btn-outline-secondary').find('span').withText('Unfollow adam1234io'))
+        .click(Selector('.btn.btn-sm.btn-outline-primary').find('span').withText('Favorite Article'))
+        .click(Selector('.article-meta').find('button').withText('Unfavorite Article (1)'))
+        .click(Selector('.info').find('a').withText('adam1234io'))
+        .click(Selector('button').withText('0').nth(2).find('.ion-heart'))
+        .click(Selector('.btn.btn-sm.pull-xs-right.btn-outline-primary').nth(3).find('span').withText('0'))
+        .click(Selector('.btn.btn-sm.pull-xs-right.btn-primary').find('span').withText('1'))
+        .click(Selector('.btn.btn-sm.pull-xs-right.btn-primary').find('span').withText('1'))
+        .click(Selector('a').withText('8'))
+        .click(Selector('[data-test="page-link-4"].page-item').find('a').withText('4'))
+        .click(Selector('a').withText('Home'))
+        .click(Selector('a').withText('Your Feed'))
+        .click(Selector('a').withText('New Article'))
+        .typeText(Selector('.form-control.form-control-lg'), 'test_flow')
+        .typeText(Selector('.form-group').nth(1).find('.form-control'), 'kajsdasdasda')
+        .typeText(Selector('.form-group').nth(2).find('.form-control'), 'adasdasdas')
+        .typeText(Selector('.form-group').nth(3).find('.form-control'), 'asdasdsadsad')
+        .click(Selector('button').withText('Publish Article'))
+        .typeText(Selector('.form-control'), 'fgdgfdgd')
+        .click(Selector('button').withText('Post Comment'))
+        .click(Selector('.mod-options').find('.ion-trash-a'))
+        .click(Selector('.article-meta').nth(1).find('button').withText('Delete Article'))
+        .click(Selector('a').withText('Your Feed'))
+        .click(Selector('html'))
+        .click(Selector('a').withText('Global Feed'))
+        .click(Selector('a').withText('35'))
+        .click(Selector('a').withText('33'))
+        .click(Selector('h1').withText('魔法薇'))
+        .drag(Selector('p').withText('煎熬了几分拉上了放假啦时间的浪费'), 324, 3, {
+            offsetX: 8,
+            offsetY: 12
+        })
+        .click(Selector('.nav.navbar-nav.pull-xs-right'))
+        .click(Selector('a').withText('Home'))
+        .click(Selector('a').withText('Settings'))
+        .typeText(Selector('.form-group').nth(2).find('.form-control.form-control-lg'), 'testpage')
+        .click(Selector('button').withText('Update Settings'))
+        .click(Selector('a').withText('Settings'))
+        .click(Selector('button').withText('Or click here to logout.'));
+});
